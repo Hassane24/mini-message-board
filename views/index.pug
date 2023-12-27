@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  ul 
+    each val in comments 
+      div 
+        li= "text:" + val.text 
+        li= "user:" + val.user 
+        li= "added:" + val.added
+  a(href="/new") Go to form
